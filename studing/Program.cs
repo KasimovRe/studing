@@ -11,7 +11,9 @@ namespace studing
             // программа для конвертации валют (нединамичная)
             Console.WriteLine("Кол-во руб.");
             double r = Convert.ToDouble(Console.ReadLine());
+            double e = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Сколько у тебя долларов: " + (r / 75));
+            Console.WriteLine("Сколько у тебя евро: " + (r / 85));
 
         }
     }
