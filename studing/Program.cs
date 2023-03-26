@@ -6,7 +6,7 @@ namespace studing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Hello, World! and My planned game");
         }
     }
 }
