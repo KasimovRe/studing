@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E30CFA5-A7A0-42B9-9CD4-4C46C317C27E}</ProjectGuid>
+    <ProjectGuid>{149DBE54-3CAD-4941-9F59-F9A6C4DF108A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>studing</RootNamespace>
-    <AssemblyName>studing</AssemblyName>
+    <RootNamespace>calc</RootNamespace>
+    <AssemblyName>calc</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="calc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
