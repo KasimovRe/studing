@@ -6,18 +6,129 @@ namespace studing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World! and My planned game");
+            /* // пишем простейший калькулятор 1 СПОСОБ
 
-            // программа для конвертации валют (нединамичная)
-            Console.WriteLine("Кол-во руб.");
-            double r = double.Parse(Console.ReadLine());
+            double number1, number2;
+            string simvol;
 
-            Console.WriteLine("Сколько у тебя долларов: " + (r / 75));
-            Console.WriteLine("Сколько у тебя евро: " + (r / 85));
-            Console.ReadLine();
-            
-            //по сравнению с 14 летками, которые учатся этому уже несколько лет, мое "творение" жалко
+            Console.WriteLine("Для корректной работы простейшего калькулятора, вводите только два числа");
+            Console.WriteLine("При указании алгебраического метода вводите только номер операции");
 
+            Console.WriteLine("");
+
+            Console.WriteLine("Введите номер операции:");
+            Console.WriteLine("---");
+
+            Console.WriteLine("Сложение (+) = 1");
+            Console.WriteLine("Вычитание (-) = 2");
+            Console.WriteLine("Деление (/) = 3");
+            Console.WriteLine("Умножение (*) = 4");
+
+            simvol = Console.ReadLine();
+
+            if ((simvol == "1") || (simvol == "2") || (simvol == "3") || (simvol == "4"))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("---");
+                Console.WriteLine("Введите первое число:");
+                number1 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Введите второе число:");
+                number2 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("");
+
+                    switch (simvol)
+                    {
+                        case "1":
+                            Console.WriteLine("---");
+                            Console.WriteLine("Ccумма ваших чисел = " + (number1 + number2));
+                            break;
+                        case "2":
+                            Console.WriteLine("---");
+                            Console.WriteLine("Разность ваших чисел = " + (number1 - number2));
+                            break;
+                        case "3":
+                            Console.WriteLine("---");
+                            Console.WriteLine("Результат деления ваших чисел = " + (number1 / number2));
+                            break;
+                        case "4":
+                            Console.WriteLine("---");
+                            Console.WriteLine ("Произведение ваших чисел = " + (number1 * number2));
+                            break;
+                    }
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Вы ввели некоректное значение");
+                Console.ReadLine();
+            } */
+
+
+            // пишем простейший калькулятор 2 СПОСОБ
+
+            double number1, number2;
+            string simvol;
+
+            Console.WriteLine("Для корректной работы простейшего калькулятора, вводите только два числа");
+            Console.WriteLine("При указании алгебраического метода вводите только номер операции");
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Введите номер операции:");
+            Console.WriteLine("---");
+
+            Console.WriteLine("Сложение (+) = 1");
+            Console.WriteLine("Вычитание (-) = 2");
+            Console.WriteLine("Деление (/) = 3");
+            Console.WriteLine("Умножение (*) = 4");
+
+            simvol = Console.ReadLine();
+
+            if ((simvol == "1") || (simvol == "2") || (simvol == "3") || (simvol == "4"))
+            {
+                Console.WriteLine("");
+                Console.WriteLine("---");
+                Console.WriteLine("Введите первое число:");
+                number1 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Введите второе число:");
+                number2 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("");
+
+                if (simvol == "1")
+                {
+                    Console.WriteLine("---");
+                    Console.WriteLine("Ccумма ваших чисел = " + (number1 + number2));
+                    Console.ReadLine();
+                }
+                else if (simvol == "2")
+                {
+                    Console.WriteLine("---");
+                    Console.WriteLine("Разность ваших чисел = " + (number1 - number2));
+                    Console.ReadLine();
+                }
+                else if (simvol == "3")
+                {
+                    Console.WriteLine("---");
+                    Console.WriteLine("Результат деления ваших чисел = " + (number1 / number2));
+                    Console.ReadLine();
+                }
+                else if (simvol == "4")
+                {
+                    Console.WriteLine("---");
+                    Console.WriteLine("Произведение ваших чисел = " + (number1 * number2));
+                    Console.ReadLine();
+                }
+            }
+            else
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Вы ввели некоректное значение");
+                Console.ReadLine();
+            }
         }
     }
 }
