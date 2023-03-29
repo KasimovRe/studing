@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09D1974D-5263-40E2-BD8E-B1CFCAC3FF3B}</ProjectGuid>
+    <ProjectGuid>{EBD11B0A-E2C9-459C-A315-AB199D522102}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>calc2</RootNamespace>
-    <AssemblyName>calc2</AssemblyName>
+    <RootNamespace>schoolWORK</RootNamespace>
+    <AssemblyName>schoolWORK</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calc2.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
