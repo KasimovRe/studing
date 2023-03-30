@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,15 +10,15 @@ namespace test
     internal class Program
     {
         static void Main(string[] args)
-        {
-            int kolvo = 0;
+        { 
+            int i = int.Parse(Console.ReadLine());
 
-            var i = 1;
-
-            for (Console.WriteLine("Начало выполнения цикла"); i < 4; Console.WriteLine($"i = {i}"))
+            for (; i > 0; i--)
             {
-                i++;
+                Console.WriteLine("до взрыва устройства осталось " + i + "мс");
             }
+            Console.WriteLine("Бум!");
+            Console.ReadLine();
         }
     }
 }
