@@ -11,53 +11,67 @@ namespace calc
     {
         static void Main(string[] args)
         {
-            double n1, n2 ;
-            string metod;
+            //пишем ццикл, который повторяется 2 раза
+            //и в нем же еще 1 цикл для вывода 2 разных треугольников
+            //то есть выводит один шарп, цикл кончается, след строчка, два шарп, цикл кончается, и тд
 
-            while (true)
-            {   Console.Clear();
-                Console.WriteLine("Введите число 1");
-                n1 = double.Parse(Console.ReadLine());
-
-                Console.WriteLine("Введите число 2");
-                n2 = double.Parse(Console.ReadLine());
-
-
-                Console.WriteLine("Выберите метод операции:");
-                Console.WriteLine("(+) =1, (-) =2, (*) =3, (/) =4");
-                metod = (Console.ReadLine());
-
-                switch (metod)
+            for (int tr12 = 0; tr12 == 0; tr12++)
+            {
+                for (int visot1 = 0; visot1 <= 10; visot1++)
                 {
-                    case "1":
-                        Console.WriteLine(n1 + n2);
-                        Console.ReadLine();
-                        break;
-                    case "2":
-                        Console.WriteLine(n1 - n2);
-                        Console.ReadLine();
-                        break;
-                    case "3":
-                        Console.WriteLine(n1 * n2);
-                        Console.ReadLine();
-                        break;
-                    case "":
-                        if (n2 == 0)
-                        {
-                            Console.WriteLine("0");
-                            Console.ReadLine();
-                        }
-                        else
-                        {
-                            Console.WriteLine(n1 / n2);
-                            Console.ReadLine();
-                        }
-                        break;
-                    default:
-                        Console.WriteLine("Некоректно введены значения");
-                        Console.ReadLine();
-                        break;
-                        // меньше моих предыдущих кодов на >20 строчек. фунционал тот же, только не так "красиво"
+                    for (int kolvoc1 = 0; kolvoc1 < visot1; kolvoc1++)
+                    {
+                        Console.Write('#');
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+                Console.WriteLine();
+
+                for (int visot2 = 0; visot2 <= 10; visot2++)
+                {
+                    for (int kolvoc2 = 10; kolvoc2 > visot2; kolvoc2--)
+                    {
+                        Console.Write('#');
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+
+
+                for (int visot3 = 1; visot3 <= 10; visot3++) // высота на 10 строчек
+                {
+                    for (int kolvocpust3 = 10; kolvocpust3 > visot3; kolvocpust3--) // если строчка 1, то прбелов 9
+                    {
+                        Console.Write(' ');
+                    }
+
+                    for (int kolvo3 = 1; kolvo3 <= visot3; kolvo3++)
+                    {
+                        Console.Write('#');
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine();
+                Console.WriteLine();
+
+
+                for (int visot4 = 0; visot4 <= 10; visot4++) // высота на 10 строчек
+                {
+                    for (int kolvo4 = 10; kolvo4 > visot4; kolvo4--)
+                    {
+                        Console.Write('#');
+                    }
+                    Console.WriteLine();
+
+                    for (int kolvocpust4 = 0; kolvocpust4 <= visot4; kolvocpust4++) // если строчка 1, то прбелов 9
+                    {
+                        Console.Write(' ');
+                    }
+
                 }
             }
         }

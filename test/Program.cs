@@ -10,15 +10,35 @@ namespace test
     internal class Program
     {
         static void Main(string[] args)
-        { 
-            int i = int.Parse(Console.ReadLine());
+        {
+            //for (int visot3 = 1; visot3 <= 10; visot3++) // высота на 10 строчек
+            //{
+            //    for (int kolvocpust3 = 10; kolvocpust3 > visot3; kolvocpust3--) // если строчка 1, то прбелов 9
+            //    {
+            //        Console.Write(' ');
+            //    }
 
-            for (; i > 0; i--)
+            //    for (int kolvo3 = 1; kolvo3 <= visot3 ; kolvo3++)
+            //    {
+            //        Console.Write('#');
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            for (int visot4 = 0; visot4 <= 10; visot4++) // высота на 10 строчек
             {
-                Console.WriteLine("до взрыва устройства осталось " + i + "мс");
+                for (int kolvo4 = 10; kolvo4 > visot4; kolvo4--)
+                {
+                    Console.Write('#');
+                }
+                Console.WriteLine();
+
+                for (int kolvocpust4 = 0; kolvocpust4 <= visot4; kolvocpust4++) // если строчка 1, то прбелов 9
+                {
+                    Console.Write(' ');
+                }
+
             }
-            Console.WriteLine("Бум!");
-            Console.ReadLine();
         }
     }
 }
