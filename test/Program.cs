@@ -25,18 +25,23 @@ namespace test
             //    Console.WriteLine();
             //}
 
-            for (int visot4 = 0; visot4 <= 10; visot4++) // высота на 10 строчек
-            {
-                for (int kolvo4 = 10; kolvo4 > visot4; kolvo4--)
-                {
-                    Console.Write('#');
-                }
-                Console.WriteLine();
+            //for (int visot4 = 0; visot4 <= 10; visot4++) // высота на 10 строчек
+            //{
+            //    for (int kolvo4 = 10; kolvo4 > visot4; kolvo4--)
+            //    {
+            //        Console.Write('#');
+            //    }
+            //    Console.WriteLine();
 
-                for (int kolvocpust4 = 0; kolvocpust4 <= visot4; kolvocpust4++) // если строчка 1, то прбелов 9
-                {
-                    Console.Write(' ');
-                }
+            //    for (int kolvocpust4 = 0; kolvocpust4 <= visot4; kolvocpust4++) // если строчка 1, то прбелов 9
+            //    {
+            //        Console.Write(' ');
+            //    }
+
+            //}
+
+            if (true)
+            {
 
             }
         }
