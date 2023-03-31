@@ -24,7 +24,7 @@ namespace calc
                 return;
             }
             
-            for (int tr12 = 0; ; tr12++)
+            for (int tr12 = 0; tr12 == 0; tr12++)
             {
                 for (int visot1 = 0 ; visot1 <= height; visot1++)
                 {
@@ -37,6 +37,7 @@ namespace calc
 
                 Console.WriteLine();
                 Console.WriteLine();
+
 
                 for (int visot2 = 0; visot2 <= height; visot2++)
                 {
