@@ -40,10 +40,19 @@ namespace test
 
             //}
 
-            if (true)
-            {
+            // код выводит число с консоли. если отриц = 0
 
-            }
+            Console.WriteLine("Введите число");
+            int a = int.Parse(Console.ReadLine());
+
+            int zero = 12 * a;
+
+            int[] house;
+            house = new int[6];
+
+            house[4] = zero;
+
+            Console.WriteLine(house[4]);
         }
     }
 }
