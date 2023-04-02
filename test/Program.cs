@@ -42,17 +42,22 @@ namespace test
 
             // код выводит число с консоли. если отриц = 0
 
-            Console.WriteLine("Введите число");
-            int a = int.Parse(Console.ReadLine());
+            string[] massa = new string[10];
 
-            int zero = 12 * a;
+            massa[3] = "hello and";
+            massa[4] = " slava sovetskomu soyuzu";
 
-            int[] house;
-            house = new int[6];
+            Console.WriteLine(massa[3] + massa[4]);
+            Console.WriteLine(massa.Length);
 
-            house[4] = zero;
+            int[] massiv = new int[] { 1, 2, 3, 5 };
 
-            Console.WriteLine(house[4]);
+            for (int i = 0; i < massiv.Length; i++)
+            {
+                Console.WriteLine(massiv[i]);
+            }
+
+            Console.ReadLine();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace calc
 {
-    internal class calc
+    internal class treugolnik
     {
         static void Main(string[] args)
         {

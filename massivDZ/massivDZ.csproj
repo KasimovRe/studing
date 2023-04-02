@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{149DBE54-3CAD-4941-9F59-F9A6C4DF108A}</ProjectGuid>
+    <ProjectGuid>{B6DE3FEA-F83C-4525-A168-F685A1208FFA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>calc</RootNamespace>
-    <AssemblyName>calc</AssemblyName>
+    <RootNamespace>massivDZ</RootNamespace>
+    <AssemblyName>massivDZ</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="treugolnik.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
