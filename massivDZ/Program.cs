@@ -13,7 +13,12 @@ namespace massivDZ
 
             // дз 1. заполнить массив с клавиатуры
 
-            int[] massiv = new int[4];
+            Console.Write("Введите длину массива: ");
+            int choice = int.Parse(Console.ReadLine());
+
+            Console.ReadLine();
+
+            int[] massiv = new int[choice];
 
             for (int i = 0; i < massiv.Length; i++)
             {
@@ -23,20 +28,20 @@ namespace massivDZ
             Console.ReadLine();
 
             // дз 2. вывести массив в обратном порядке
-            
-            for (int i = (massiv.Length - 1); i >=0; i--)
+
+            for (int i = (massiv.Length - 1); i >= 0; i--)
             {
                 Console.WriteLine("Значение массива " + i + " = " + massiv[i]);
             }
             Console.ReadLine();
 
-            // дз 3. найти сумму четных числе в массиве
+            // дз 3. найти сумму четных чисел в массиве
 
             int sum = 0;
             for (int i = 0; i < massiv.Length; i++)
             {
                 int number = massiv[i];
-                
+
                 if (number % 2 == 0)
                 {
                     sum = sum + number;
@@ -44,6 +49,35 @@ namespace massivDZ
                 }
             }
             Console.WriteLine("Сумма четных чисел в массиве 'massiv' = " + sum);
+            Console.ReadLine();
+
+            // дз 4.найти наименьшее число в массиве
+
+            int min = massiv[0];
+            int a = 1, b = 0;
+            do
+            {
+                if (massiv[a] > massiv[b])
+                {
+                    if (min > massiv[b])
+                    {
+                        min = massiv[b];
+                    }
+                    
+                }
+                else
+                {
+                    if (min > massiv[b])
+                    {
+                        min = massiv[a];
+                    }
+                }
+
+                a++; b++;
+            
+            }
+            while (a < massiv.Length);
+            Console.WriteLine("Наименьшее число из массива 'massiv' = " +  min);
             Console.ReadLine();
         }
     }
