@@ -22,7 +22,7 @@ namespace massivDZ
 
             for (int i = 0; i < massiv.Length; i++)
             {
-                Console.WriteLine("Введите значение массива " + i);
+                Console.Write("Введите значение массива " + i + ": ");
                 massiv[i] = int.Parse(Console.ReadLine());
             }
             Console.ReadLine();
@@ -63,7 +63,7 @@ namespace massivDZ
                     {
                         min = massiv[b];
                     }
-                    
+
                 }
                 else
                 {
@@ -74,10 +74,23 @@ namespace massivDZ
                 }
 
                 a++; b++;
-            
+
             }
             while (a < massiv.Length);
-            Console.WriteLine("Наименьшее число из массива 'massiv' = " +  min);
+            Console.WriteLine("Наименьшее число из массива 'massiv' = " + min);
+            Console.ReadLine();
+
+            // повторение 4.
+
+            int chet = massiv[0];
+            for (int i = 0; i < massiv.Length; i++)
+            {
+                if (chet > massiv[i])
+                {
+                    chet = massiv[i];
+                }
+            }
+            Console.WriteLine("Наименьшее число второго захода из массива 'massiv' " + " = " + chet);
             Console.ReadLine();
         }
     }
