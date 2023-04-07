@@ -12,7 +12,7 @@ namespace schoolWORK
         {
             //написать программу которая считает кол во четных и нечетных чисел в том диапозоне, который указал пользователь
 
-            /* uint kolvo, chet, nechet; // uint потому что отриц чисел быть не может 
+            uint kolvo, chet, nechet; // uint потому что отриц чисел быть не может 
             kolvo = 0;
             chet = 0;
             nechet = 0;
@@ -47,7 +47,7 @@ namespace schoolWORK
             Console.WriteLine("Кол во нечетных чисел = " + nechet);
             Console.WriteLine("Сумма всех чисел/ диапозон = " + (chet + nechet));
 
-            Console.ReadLine(); */
+            Console.ReadLine();
 
 
             /* Упражнение 1

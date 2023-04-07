@@ -33,10 +33,10 @@ namespace studing
                 {
                     Console.WriteLine("");
                     Console.WriteLine("---");
-                    Console.WriteLine("Введите первое число:");
+                    Console.Write("Введите первое число: ");
                     number1 = double.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Введите второе число:");
+                    Console.Write("Введите второе число: ");
                     number2 = double.Parse(Console.ReadLine());
 
                     Console.WriteLine("");

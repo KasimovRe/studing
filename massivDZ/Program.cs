@@ -22,7 +22,7 @@ namespace massivDZ
 
             for (int i = 0; i < massiv.Length; i++)
             {
-                Console.Write("Введите значение массива " + i + ": ");
+                Console.Write("Введите значение массива " + (i + 1) + ": ");
                 massiv[i] = int.Parse(Console.ReadLine());
             }
             Console.ReadLine();
@@ -31,7 +31,7 @@ namespace massivDZ
 
             for (int i = (massiv.Length - 1); i >= 0; i--)
             {
-                Console.WriteLine("Значение массива " + i + " = " + massiv[i]);
+                Console.WriteLine("Значение массива " + (i + 1) + " = " + massiv[i]);
             }
             Console.ReadLine();
 

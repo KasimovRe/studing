@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -42,22 +43,38 @@ namespace test
 
             // код выводит число с консоли. если отриц = 0
 
-            string[] massa = new string[10];
+            //string[] massa = new string[10];
 
-            massa[3] = "hello and";
-            massa[4] = " slava sovetskomu soyuzu";
+            //massa[3] = "hello and";
+            //massa[4] = " slava sovetskomu soyuzu";
 
-            Console.WriteLine(massa[3] + massa[4]);
-            Console.WriteLine(massa.Length);
+            //Console.WriteLine(massa[3] + massa[4]);
+            //Console.WriteLine(massa.Length);
 
-            int[] massiv = new int[] { 1, 2, 3, 5 };
+            //int[] massiv = new int[] { 1, 2, 3, 5 };
 
-            for (int i = 0; i < massiv.Length; i++)
+            //for (int i = 0; i < massiv.Length; i++)
+            //{
+            //    Console.WriteLine(massiv[i]);
+            //}
+
+            //Console.ReadLine();
+
+
+            int[] array = { 1, 7, 12, 221, 43, 6, 92, 4, 9, 7};
+
+            Console.Write("Введите число из массива, чей индекс хотите узнать: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (array.Contains(number))
             {
-                Console.WriteLine(massiv[i]);
+                int result = Array.FindIndex(array, i => i == number);
+                Console.WriteLine("Индекс вашего числа = " + "[" + result + "]");
             }
+            else
+                Console.WriteLine("Вашего числа нет в массиве");
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
