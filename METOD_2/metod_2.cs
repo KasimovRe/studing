@@ -10,9 +10,19 @@ namespace METOD_2
     {
         static void Main(string[] args)
         {
-            int[] array = { 1, 54, 82, 15, 19, 4, 54, 2};
+            Console.Write("Введите размер массива: ");
+            int length = int.Parse(Console.ReadLine());
 
-            Console.Write("Введите число из массива, чей индекс хотите узнать: ");
+            Console.WriteLine("Введите диапозон масссива");
+            Console.Write("\nОт: ");
+            int minNumber = int.Parse(Console.ReadLine());
+
+            Console.Write("До: ");
+            int maxNumber = int.Parse(Console.ReadLine());
+
+            int[] array = RandomArray(length, minNumber, maxNumber);
+
+            Console.Write("\nВведите число из массива, чей индекс хотите узнать: ");
             int number = int.Parse(Console.ReadLine());
 
             int index = Counter(number, array);
@@ -38,6 +48,19 @@ namespace METOD_2
             }
 
             return -1;
+        }
+
+        static int[] RandomArray(int length,int minNumber, int MaxNumber)
+        {
+            Random random = new Random();
+            int[] array = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                array[i] = random.Next(minNumber, MaxNumber);
+            }
+
+            return array;
         }
     }
 }
