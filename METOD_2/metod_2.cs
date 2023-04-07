@@ -15,28 +15,29 @@ namespace METOD_2
             Console.Write("Введите число из массива, чей индекс хотите узнать: ");
             int number = int.Parse(Console.ReadLine());
 
-            Counter(number, array);
+            int index = Counter(number, array);
+
+            if (index >= 0)
+            {
+                Console.WriteLine("Индекс вашего числа = " + "[" + index + "]");
+                Console.ReadKey();
+            }
+            else
+                Console.WriteLine("Вашего числа нет в массиве");
+            Console.ReadKey();
         }
 
-        static void Counter(int number, int[] array)
+        static int Counter(int number, int[] array)
         {
-            int a = 1;
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == number)
                 {
-                    Console.WriteLine("Индекс введенного числа = " + "[" + i + "]");
-                    Console.ReadKey();
-                    break;
+                    return i;
                 }
-                else if (a == array.Length)
-                {
-                    Console.WriteLine("Вашего числа нет в массиве");
-                    Console.ReadKey();
-                    break;
-                }
-                a++;
             }
+
+            return -1;
         }
     }
 }
