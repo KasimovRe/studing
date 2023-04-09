@@ -1,36 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace test
+namespace Array_TryCatch
 {
     internal class Program
     {
         // написать код, который выводит массив, написаннный с клавы
         // если значение пользователя null - заполнить строку -1
+
         static void Main(string[] args)
         {
-            /*
-            int[] array = { 1, 7, 12, 221, 43, 6, 92, 4, 9, 7};
-
-            Console.Write("Введите число из массива, чей индекс хотите узнать: ");
-            int number = int.Parse(Console.ReadLine());
-
-            if (array.Contains(number)) // проверяет на наличие нужного значения
-            {
-                int result = Array.FindIndex(array, i => i == number); // находит индекс
-                Console.WriteLine("Индекс вашего числа = " + "[" + result + "]");
-            }
-            else
-                Console.WriteLine("Вашего числа нет в массиве");
-
-            Console.ReadKey();
-            */
-
             Console.Write("Укажите размер массива: ");
             int lenghtNumberUser = int.Parse(Console.ReadLine());
 
@@ -40,10 +22,7 @@ namespace test
             Console.WriteLine("\nВаш массив:");
             Conclusion(MyArray);
 
-
             Console.ReadKey();
-
-
         }
 
         /// <summary>
@@ -54,7 +33,7 @@ namespace test
         static int[] Сounter(int lenghtNumberUser)
         {
             int[] MyArray = new int[lenghtNumberUser];
-            
+
             for (int i = 0; i < MyArray.Length; i++)
             {
                 Console.Write("Введите значение №" + (i + 1) + ": ");

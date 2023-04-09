@@ -29,7 +29,7 @@ namespace METOD_2
 
             if (index >= 0)
             {
-                Console.WriteLine("Индекс вашего числа = " + "[" + index + "]");
+                Console.WriteLine("Индекс вашего первого числа = " + "[" + index + "]");
                 Console.ReadKey();
             }
             else
@@ -37,6 +37,12 @@ namespace METOD_2
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Находит индекс переменной
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="array"></param>
+        /// <returns></returns>
         static int Counter(int number, int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -50,6 +56,13 @@ namespace METOD_2
             return -1;
         }
 
+        /// <summary>
+        /// Заполняет массив рандомными числами в зависимости от выбранного диапозона и длины
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="minNumber"></param>
+        /// <param name="MaxNumber"></param>
+        /// <returns></returns>
         static int[] RandomArray(int length,int minNumber, int MaxNumber)
         {
             Random random = new Random();
