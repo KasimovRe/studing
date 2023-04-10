@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Array_TryCatch
+namespace Array_null
 {
     internal class Program
     {
         // написать код, который выводит массив, написаннный с клавы
-        // если значение пользователя null - заполнить строку -1
+        // если значение пользователя null - заполнить строку "нет данных"
 
         static void Main(string[] args)
         {
             Console.Write("Укажите размер массива: ");
             int lenghtNumberUser = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nЗаполните массив числами.");
-            int[] MyArray = Сounter(lenghtNumberUser);
+            Console.WriteLine("\nЗаполните массив.");
+            string[] MyArray = Сounter(lenghtNumberUser);
 
             Console.WriteLine("\nВаш массив:");
             Conclusion(MyArray);
@@ -30,21 +30,16 @@ namespace Array_TryCatch
         /// </summary>
         /// <param name="lenghtNumberUser"></param>
         /// <returns></returns>
-        static int[] Сounter(int lenghtNumberUser)
+        static string[] Сounter(int lenghtNumberUser)
         {
-            int[] MyArray = new int[lenghtNumberUser];
+            string[] MyArray = new string[lenghtNumberUser];
 
             for (int i = 0; i < MyArray.Length; i++)
             {
                 Console.Write("Введите значение №" + (i + 1) + ": ");
-                try
-                {
-                    MyArray[i] = int.Parse(Console.ReadLine());
-                }
-                catch
-                {
-                    MyArray[i] = -1;
-                }
+                String MyArrayStr = Console.ReadLine();
+                string result = MyArrayStr ?? "нет данных";
+                MyArray[i] = result;
             }
             return MyArray;
         }
@@ -54,7 +49,7 @@ namespace Array_TryCatch
         /// </summary>
         /// <param name="MyArray"></param>
         /// <returns></returns>
-        static int[] Conclusion(int[] MyArray)
+        static string[] Conclusion(string[] MyArray)
         {
             for (int i = 0; i < MyArray.Length; i++)
             {
@@ -63,5 +58,4 @@ namespace Array_TryCatch
             return MyArray;
         }
     }
-
 }
