@@ -28,11 +28,25 @@ namespace test
                 Console.WriteLine("Вашего числа нет в массиве");
 
             Console.ReadKey(); */
+            int lenght = int.Parse(Console.ReadLine());
+            string[] MyArray = new string[lenght];
 
-            string text = null;
-            string name = text ?? "нет данных";  // равно Tom, так как text равен null
-            Console.WriteLine(name);
+            MyArray[0] = Console.ReadLine();
+            string[] Str = new string [1];
+            Str[0] = MyArray[0];
 
+            string result = Str[0] ?? "нет данных";
+            if (MyArray[0] == null)
+            {
+                Console.WriteLine(MyArray[0] = "нет данных");
+            }
+            else
+            {
+                Console.WriteLine(MyArray[0]);
+            }
+            Console.WriteLine(result);
+
+            Console.ReadKey();
         } 
     }
 }
