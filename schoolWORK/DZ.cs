@@ -10,6 +10,7 @@ namespace schoolWORK
     {
         static void Main(string[] args)
         {
+            
             //написать программу которая считает кол во четных и нечетных чисел в том диапозоне, который указал пользователь
 
             uint kolvo, chet, nechet; // uint потому что отриц чисел быть не может 
@@ -119,7 +120,20 @@ namespace schoolWORK
                     Console.ReadKey();
                     break;
                 }
+            } 
+
+            //Упражнение 1.1
+            // даны целые числа К и N (N>0). Вывести N раз число K
+
+            int K = 5;
+            int N = 3;
+
+            for (int i = 0; i < N; i++)
+            {
+                Console.WriteLine(K);
             }
+
+
         }
     }
 }
