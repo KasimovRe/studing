@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "my_projects", "my_projects"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calc", "calc\calc.csproj", "{149DBE54-3CAD-4941-9F59-F9A6C4DF108A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolWORK", "schoolWORK\schoolWORK.csproj", "{EBD11B0A-E2C9-459C-A315-AB199D522102}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tasks", "schoolWORK\tasks.csproj", "{EBD11B0A-E2C9-459C-A315-AB199D522102}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{3ABB9B27-8313-493B-B4BF-5C547E1E9398}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "school", "test\school.csproj", "{3ABB9B27-8313-493B-B4BF-5C547E1E9398}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "massivDZ", "massivDZ\massivDZ.csproj", "{B6DE3FEA-F83C-4525-A168-F685A1208FFA}"
 EndProject

@@ -121,19 +121,6 @@ namespace schoolWORK
                     break;
                 }
             } 
-
-            //Упражнение 1.1
-            // даны целые числа К и N (N>0). Вывести N раз число K
-
-            int K = 5;
-            int N = 3;
-
-            for (int i = 0; i < N; i++)
-            {
-                Console.WriteLine(K);
-            }
-
-
         }
     }
 }
