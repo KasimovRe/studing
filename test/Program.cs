@@ -10,27 +10,29 @@ namespace test
     {
         static void Main(string[] args)
         {
-            int number = 27349;
-            Console.WriteLine(SumNumber(ref number));
+            uint number = 463458899;
+            uint sum = 0;
+
+            SumNumber(number, ref sum);
+            Console.WriteLine(sum);
 
         }
 
-        static int SumNumber(ref int number, int sum = 0, int constant = 10)
+        static uint SumNumber(uint number, ref uint sum, uint constant = 10)
         {
-            if (number / constant < 10)
+            if (number / constant < 9)
             {
                 sum += (number % 10);
                 sum += (number / constant);
-
-                return 0;
+                return sum;
             }
 
-            sum += ((number / constant) % 10);
-            constant *= 10;
+                sum += ((number / constant) % 10);
+                constant *= 10;
 
-            SumNumber(ref number, sum, constant);
+                SumNumber(number, ref sum, constant);
 
-            return sum+= sum;
+                return sum;
 
         }
     }
