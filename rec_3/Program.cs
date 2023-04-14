@@ -9,21 +9,31 @@ namespace rec_3
 {
     internal class Program
     {
-        // найти сумму числа с помощью рекурсии (561 = 12)
-        // надо написать такой код, где мы будем каждый раз делить на 10. если остаток меньше 10, то начать код. либо *10 и повторить
-        // сам код будет делить числа, начиная с большего, и вычитать остаток. Это будет помещаться в переменную, которая будет скалдываться со след остатками
         static void Main(string[] args)
         {
-            int a = 27349;
+            uint number = 5681;
+            uint sum = 0;
 
-            Console.WriteLine(a % 10); // 9
-
-            Console.WriteLine((a / 10) % 10); // 4
-            Console.WriteLine((a / 100) % 10); // 3
-            Console.WriteLine((a / 1000) % 10); // 7
-
-            Console.WriteLine(a / 10000); // 2
+            SumNumber(number, ref sum);
+            Console.WriteLine(sum);
         }
 
+        static uint SumNumber(uint number, ref uint sum, uint constant = 10)
+        {
+            if (number / constant < 9)
+            {
+                sum += (number % 10);
+                sum += (number / constant);
+                return sum;
+            }
+
+            sum += ((number / constant) % 10);
+            constant *= 10;
+
+            SumNumber(number, ref sum, constant);
+
+            return sum;
+
+        }
     }
 }
