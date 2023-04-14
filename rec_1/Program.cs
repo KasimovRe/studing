@@ -13,10 +13,10 @@ namespace rec_1
         {
             int[] MyArray = { 19, 42, 73, 52, 96, 10, 64 };
 
-            ConsoleArray(ref MyArray, 0);
+            ConsoleArray(ref MyArray);
         }
 
-        static void ConsoleArray(ref int[] MyArray, int index)
+        static void ConsoleArray(ref int[] MyArray, int index = 0)
         {
             if (index == MyArray.Length)
                 return;

@@ -12,31 +12,24 @@ namespace ref_2
         static void Main(string[] args)
         {
             int[] MyArray = { 20, 30, 50 };
-            int sum = 0;
 
-            ConsoleArray(ref MyArray, index: 0, ref sum);
+            ConsoleArray(ref MyArray);
+
+            Console.ReadLine();
         }
 
-        static void ConsoleArray(ref int[] MyArray, int index, ref int sum)
+        static void ConsoleArray(ref int[] MyArray, int index = 0, int sum = 0)
         {
-            if (index == MyArray.Length)
+            if (index >= MyArray.Length)
             {
                 Console.WriteLine(sum);
                 return;
             }
 
-            int number = MyArray[index];
+            sum += MyArray[index];
             index++;
 
-            Sum(ref number, ref sum);
-
-            ConsoleArray(ref MyArray, index, ref sum);
-        }
-
-        static int Sum(ref int number, ref int sum)
-        {
-            sum += number;
-            return sum;
+            ConsoleArray(ref MyArray, index, sum);
         }
     }
 }
