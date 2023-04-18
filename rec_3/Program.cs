@@ -33,7 +33,6 @@ namespace rec_3
             SumNumber(number, ref sum, constant);
 
             return sum;
-
         }
     }
 }
