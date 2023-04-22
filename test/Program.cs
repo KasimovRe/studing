@@ -15,67 +15,24 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.Write("Выберите напиток из списка: ");
+            Console.WriteLine("Choose a day of the week:");
+            string input = Console.ReadLine();
 
-            foreach (var convert in Enum.GetNames(typeof(Napitok)))
-            {
-                Console.Write($"{convert}; ");
-            }
-            Console.WriteLine("\n");
-
-            string choice = Console.ReadLine();
-            Converter(ref choice);
-            int number = int.Parse(choice);
-
-            Napitok napitok = (Napitok)number;
-
-            switch (napitok)
-            {
-                case Napitok.fanta:
-                    Console.WriteLine($"Напиток: {napitok}  |  Цена: 100р");
-                    break;
-                case Napitok.cola:
-                    Console.WriteLine($"Напиток: {napitok}  |  Цена: нет в наличии");
-                    break;
-                case Napitok.chernogolovka:
-                    Console.WriteLine($"Напиток: {napitok}  |  Цена: 200р");
-                    break;
-            }
-
+            if (Enum.TryParse(input, out DayOfWeek day))
+                Console.WriteLine($"You chose {day}");
+            else
+                Console.WriteLine("Invalid input");
         }
-
-        /// <summary>
-        /// Представляяет собой список доступных напитков
-        /// </summary>
-        enum Napitok: byte
+        enum DayOfWeek
         {
-            fanta = 1,
-            cola,
-            chernogolovka
+             Monday = 1,
+             Tuesday,
+             Wednesday,
+             Thursday,
+             Friday,
+             Saturday,
+             Sunday
         }
-
-        /// <summary>
-        /// Конвертирует строку пользователя в номер enum
-        /// </summary>
-        /// <param name="choice"></param>
-        /// <returns></returns>
-        static string Converter(ref string choice)
-        {
-            switch (choice)
-            {
-                case "fanta":
-                    choice = "1";
-                    return choice;
-                case "cola":
-                    choice = "2";
-                    return choice;
-                case "chernogolovka":
-                    choice = "3";
-                    return choice;
-            }
-            return "-1";
-        }
-
     }
 }
         
