@@ -10,16 +10,16 @@ namespace classes_and_objects
     {
         static void Main(string[] args)
         {
-            Company apple = new Company();
+            User Lenar = new User();
 
-            string applePhone = apple.Phone;
-            int appleAge = apple.Age;
+            string nicknameLenar = Lenar.Nickname;
+            string accountLenar = Lenar.Account;
 
-            apple.Age = 2001;
-            apple.Phone = "Iphone";
+            Lenar.Nickname = "Абобус";
+            Lenar.Account = "kasimovlenar2010@gmail.com";
 
-            apple.Print();
-
+            Lenar.Info();
+            Lenar.Data(02, 10, 2010);
         }
     }
 
@@ -32,5 +32,32 @@ namespace classes_and_objects
         {
             Console.WriteLine($"Марка телефона: {Phone}\t| Год сборки: {Age}");
         }
+    }
+
+    class User
+    {
+        public string Nickname = "No name";
+        public string Account = "Not";
+
+        public void Data(int day, int month, int year)
+        {
+            Console.WriteLine($"Дата рождения: {day}.{month}.{year}");
+        }
+        public void Info()
+        {
+            Console.WriteLine($"Имя: {Nickname}\tАккаунт: {Account}");
+        }
+
+
+    }
+
+    class Family
+    {
+        public string Mother = "Not";
+        public string Father = "Not";
+        public string Brother = "Not";
+        public string Sister = "Not";
+        public string GrandMother = "Not";
+        public string GrandFather = "Not";
     }
 }
