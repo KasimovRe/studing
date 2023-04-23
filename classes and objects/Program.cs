@@ -9,61 +9,42 @@ namespace classes_and_objects
 {
     internal class Program
     {
-        static void Main(string[] args)
+
+        static User InfoUser()
         {
             User Lenar = new User
             {
-                Nickname = "Абобус",
-                Account = "kasimovlenar2010@gmail.com"
+                Nickname = "Ленар",
+                Firstname = "Касимов",
+                Age = 12,
+                Account = "kasimovlenar2010@gmail.com",
+                Phone = 89378414728
             };
-
-            Lenar.Info();
-            Lenar.Data(02, 10, 2010);
-
-            User Timerlan = new User("Бомжик", "kasimovtimerlan2009@gmail.com") { Nickname = "Кролик" };
-            Person TImerlan = new Person("Бомж", 13)
-            {
-                name = "Жоп",
-                age = 12
-            };
+            return Lenar;
         }
-    }
 
-    class Company
-    {
-        public string Phone = "None";
-        public int Age;
-
-        public void Print()
+        static void Print(User Lenar)
         {
-            Console.WriteLine($"Марка телефона: {Phone}\t| Год сборки: {Age}");
+            Console.WriteLine($"Имя: {Lenar.Nickname}");
+            Console.WriteLine($"Фамилия: {Lenar.Firstname}");
+            Console.WriteLine($"Возраст: {Lenar.Age}");
+            Console.WriteLine($"Почта: {Lenar.Account}");
+            Console.WriteLine($"Телефон: {Lenar.Phone}");
+        }
+
+        static void Main(string[] args)
+        {
+            var Lenar = InfoUser();
+            Print(Lenar);
         }
     }
 
     class User
     {
         public string Nickname = "No name";
-        public string Account = "Not";
-
-        public void Data(int day, int month, int year)
-        {
-            Console.WriteLine($"Дата рождения: {day}.{month}.{year}");
-        }
-        public void Info()
-        {
-            Console.WriteLine($"Имя: {Nickname}\tАккаунт: {Account}");
-        }
-    }
-
-    class Person
-    {
-        public string name = "Sam";
-        public int age;
-
-        public Person(string name, int age)
-        {
-            this.name = name;
-            this.age = age;
-        }
+        public string Firstname = "No firstname";
+        public int Age;
+        public string Account = "Not"; 
+        public long Phone;
     }
 }
