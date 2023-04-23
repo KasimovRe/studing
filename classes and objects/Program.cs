@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,21 @@ namespace classes_and_objects
     {
         static void Main(string[] args)
         {
-            User Lenar = new User();
-
-            string nicknameLenar = Lenar.Nickname;
-            string accountLenar = Lenar.Account;
-
-            Lenar.Nickname = "Абобус";
-            Lenar.Account = "kasimovlenar2010@gmail.com";
+            User Lenar = new User
+            {
+                Nickname = "Абобус",
+                Account = "kasimovlenar2010@gmail.com"
+            };
 
             Lenar.Info();
             Lenar.Data(02, 10, 2010);
+
+            User Timerlan = new User("Бомжик", "kasimovtimerlan2009@gmail.com") { Nickname = "Кролик" };
+            Person TImerlan = new Person("Бомж", 13)
+            {
+                name = "Жоп",
+                age = 12
+            };
         }
     }
 
@@ -47,17 +53,17 @@ namespace classes_and_objects
         {
             Console.WriteLine($"Имя: {Nickname}\tАккаунт: {Account}");
         }
-
-
     }
 
-    class Family
+    class Person
     {
-        public string Mother = "Not";
-        public string Father = "Not";
-        public string Brother = "Not";
-        public string Sister = "Not";
-        public string GrandMother = "Not";
-        public string GrandFather = "Not";
+        public string name = "Sam";
+        public int age;
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
     }
 }
