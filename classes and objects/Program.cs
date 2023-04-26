@@ -9,42 +9,29 @@ namespace classes_and_objects
 {
     internal class Program
     {
-
         static User InfoUser()
         {
             User Lenar = new User
             {
-                Nickname = "Ленар",
+                Nickname = Console.ReadLine(),
                 Firstname = "Касимов",
                 Age = 12,
                 Account = "kasimovlenar2010@gmail.com",
-                Phone = 89378414728
+                Phone = "+7 937 841-47-28"
             };
             return Lenar;
-        }
-
-        static void Print(User Lenar)
-        {
-            Console.WriteLine($"Имя: {Lenar.Nickname}");
-            Console.WriteLine($"Фамилия: {Lenar.Firstname}");
-            Console.WriteLine($"Возраст: {Lenar.Age}");
-            Console.WriteLine($"Почта: {Lenar.Account}");
-            Console.WriteLine($"Телефон: {Lenar.Phone}");
         }
 
         static void Main(string[] args)
         {
             var Lenar = InfoUser();
-            Print(Lenar);
-        }
-    }
+            Lenar.Print();
 
-    class User
-    {
-        public string Nickname = "No name";
-        public string Firstname = "No firstname";
-        public int Age;
-        public string Account = "Not"; 
-        public long Phone;
+            var Timerlan = InfoUser();
+            Timerlan.Print();
+
+            string nameTim = Lenar.PrintName();
+            Console.WriteLine(nameTim);
+        }
     }
 }
