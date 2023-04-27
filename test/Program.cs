@@ -7,32 +7,80 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace test
+// написать код, где мы указываем данные о человеке в класс, а затем передаем в другой и через него же выводим
+// если значений нет, то значения дефолтные
 {
-    // НАПИСАТЬ КОД, КОТОРЫЙ показывает сколько стоит напиток
-    // фанта - 100р, черноголовка - 200р, кола - нет
-    // пользователь вводит номер сока и на консоль выводится его цена
+    class User // Получает значения о человеке и выводит их на консоль
+    {
+        public Guid Id;
+        public string Nickname;
+        public string Firstname;
+        public int Age;
+        public string Account;
+        public string Phone;
+
+        public User()
+        {
+            Nickname = "No name";
+            Firstname = "No firstname";
+            Age = 0;
+            Account = "None";
+            Phone = "None";
+        }
+
+        public User(Lenar user)
+        {
+            Id = user.Id;
+            Nickname = user.Nickname;
+            Firstname = user.Firstname;
+            Age = user.Age;
+            Account = user.Account;
+            Phone = user.Phone;
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine($"ID: {Id}");
+            Console.Write($"Имя: {Nickname} | ");
+            Console.WriteLine($"Фамилия: {Firstname}");
+            Console.WriteLine($"Возраст: {Age}");
+            Console.WriteLine($"Почта: {Account}");
+            Console.WriteLine($"Телефон: {Phone}");
+            Console.WriteLine("----------------------------\n");
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose a day of the week:");
-            string input = Console.ReadLine();
+            Lenar lenar = new Lenar(); // здесь мы создаем объекты класса Ленар, где хранятся значения Ленара
 
-            if (Enum.TryParse(input, out DayOfWeek day))
-                Console.WriteLine($"You chose {day}");
-            else
-                Console.WriteLine("Invalid input");
-        }
-        enum DayOfWeek
-        {
-             Monday = 1,
-             Tuesday,
-             Wednesday,
-             Thursday,
-             Friday,
-             Saturday,
-             Sunday
+            User lenarUser = new User(lenar); // здесь мы создаем объект класса User, куда передаем значения объекта ленар т.е. его данные
+            User timerlanUser = new User();
+            User vladikUser = new User(lenar) // тут те же данные Ленара, только некоторые мы изменили
+            {
+                Id = Guid.NewGuid(),
+                Nickname = "Владлен",
+                Age = 17,
+                Account = "None",
+                Phone = "+7 (937) 788-80-90"
+            };
+
+            lenarUser.Print();
+            timerlanUser.Print();
+            vladikUser.Print();
         }
     }
+
+    class Lenar // хранит значение пользователя Ленар
+    {
+        public Guid Id = Guid.NewGuid();
+        public string Nickname = "Ленар";
+        public string Firstname = "Касимов";
+        public int Age = 12;
+        public string Account = "kasimovlenar2010@gamil.com";
+        public string Phone = "+7 (937) 841-47-28";
+    }
 }
-        

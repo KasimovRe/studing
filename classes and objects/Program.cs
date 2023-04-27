@@ -11,7 +11,7 @@ namespace classes_and_objects
     {
         static User InfoUser()
         {
-            User Lenar = new User
+            User Lenar = new User()
             {
                 Nickname = Console.ReadLine(),
                 Firstname = "Касимов",
@@ -32,6 +32,11 @@ namespace classes_and_objects
 
             string nameTim = Lenar.PrintName();
             Console.WriteLine(nameTim);
+        }
+
+        static void Lenar(User InfoUser)
+        {
+
         }
     }
 }
