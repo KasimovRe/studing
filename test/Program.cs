@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Dynamic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,14 +29,29 @@ namespace test
             Phone = "None";
         }
 
-        public User(Lenar user)
+        public User(string nickname, string firstname)
         {
-            Id = user.Id;
-            Nickname = user.Nickname;
-            Firstname = user.Firstname;
-            Age = user.Age;
-            Account = user.Account;
-            Phone = user.Phone;
+            Nickname = nickname ?? "нет данных";
+            Firstname = firstname ?? "нет данных";
+        }
+
+
+        public User(Guid id, string nickname, string firstname, int age, string account, string phone) : this(nickname, firstname) 
+        {
+            Id = id;
+            Age = age;
+            Account = account ?? "нет данных";
+            Phone = phone ?? "нет данных";
+        }
+
+        public User(Lenar lenar)
+        {
+            Id = lenar.Id;
+            Nickname = lenar.Nickname ?? "нет данных";
+            Firstname = lenar.Firstname ?? "нет данных";
+            Age = lenar.Age;
+            Account = lenar.Account ?? "нет данных";
+            Phone = lenar.Phone ?? "нет данных";
         }
 
         public void Print()
@@ -57,6 +73,7 @@ namespace test
         {
             Lenar lenar = new Lenar(); // здесь мы создаем объекты класса Ленар, где хранятся значения Ленара
 
+            User danielUser = new User(Guid.NewGuid(), "Даниель", "Афанасьев", 10, null, null);
             User lenarUser = new User(lenar); // здесь мы создаем объект класса User, куда передаем значения объекта ленар т.е. его данные
             User timerlanUser = new User();
             User vladikUser = new User(lenar) // тут те же данные Ленара, только некоторые мы изменили
@@ -68,6 +85,7 @@ namespace test
                 Phone = "+7 (937) 788-80-90"
             };
 
+            danielUser.Print();
             lenarUser.Print();
             timerlanUser.Print();
             vladikUser.Print();

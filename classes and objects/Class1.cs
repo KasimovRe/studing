@@ -27,6 +27,6 @@ namespace classes_and_objects
             Console.WriteLine("----------------------------\n");
         }
 
-        public string PrintName() { return $"Имя: {Nickname} | Фамилия: {Firstname}"; }
+        public string PrintName() { return $"Имя: {Nickname} | Фамилия: {Firstname}\n"; }
     }
 }
