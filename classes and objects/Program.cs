@@ -27,7 +27,7 @@ namespace classes_and_objects
             {
                 Nickname = "Тимерлан",
                 Firstname = "Касимов",
-                Age = 12,
+                Age = 13,
                 Account = null,
                 Phone = null
             };
