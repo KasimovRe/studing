@@ -35,7 +35,8 @@ namespace test
             lenarUser.Print();
             timerlanUser.Print();
             vladikUser.Print();
-            adelina.Print(adelina); // тк п-я аделина хранит значения объекта, в том числе ее экземпляр, мы можем обращаться к методу класса
+
+            adelina.PrintName(); // тк п-я аделина хранит значения объекта, в том числе ее экземпляр, мы можем обращаться к методу класса
         }
 
         static User InfoUserAdelina() // создаем объект класса User и присваевам нужные значения

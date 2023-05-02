@@ -62,7 +62,7 @@ namespace test
             Console.WriteLine("----------------------------\n");
         }
 
-        public void Print(User user)
+        public void PrintName()
         {
             Console.WriteLine("----------------------------");
             Console.Write($"Имя: {Nickname} | ");
