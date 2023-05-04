@@ -5,40 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp7
+// Создайте класс MathUtils, который будет содержать
+// статическое поле pi и методы Add() и Multiply(),
+// которые будут принимать два числа и возвращать их
+// сумму и произведение, соответственно, умноженные на значение pi.
 {
-    class IntNumber
-    {
-        private int d;
-
-        public IntNumber(int _d) {d = _d;}
-
-        public int Number
-        { 
-            get {return d;}
-            set { d = value;}
-        }
-
-        public void Display() { Console.WriteLine("d = {0}", d); }
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            // объявить экземпляр с именем number класса IntNumber
-            IntNumber number = new IntNumber(5);
+            MathUtils.Number_one = 16;
+            MathUtils.Number_two = 4;
 
-            // вывести значение внутренней переменной d
-            number.Display(); // d = 5
+            double sum;
 
-            // изменить значение d через свойство Number.set
-            number.Number = 25;
-            number.Display(); // d = 25
+            sum = MathUtils.Add();
+            Console.WriteLine(sum);
 
-            // использовать свойство Number.get для чтения d
-            int t;
-            t = number.Number; // t = 25
-            Console.WriteLine("t = {0}", t);
+            sum = MathUtils.Multiply();
+            Console.WriteLine(sum);
         }
+    }
+    class MathUtils
+    {
+        private static readonly double pi = 3.14;
+
+        public static int Number_one { get { return number_one; } set { number_one = value; } }
+        private static int number_one;
+
+        public static int Number_two { get { return number_two; } set { number_two = value; } }
+        private static int number_two;
+
+        public static double Add() { return (number_one + number_two) * pi; }
+
+        public static double Multiply() { return number_one * number_two * pi; }
     }
 }
