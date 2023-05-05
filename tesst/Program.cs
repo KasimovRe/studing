@@ -41,6 +41,7 @@ namespace ConsoleApp7
         }
         public static bool IsDateOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek)
         {
+            Console.Write("$ {dayOfWeek} );
             return dateTime.DayOfWeek == dayOfWeek;
         }
     }

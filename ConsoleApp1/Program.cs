@@ -14,7 +14,8 @@ namespace ConsoleApp7
     {
         static void Main(string[] args)
         {
-            MathUtils.Number_one = 16;
+            MathUtils math1 = new MathUtils() { Number_one = 16 };
+
             MathUtils.Number_two = 4;
 
             double sum;
@@ -24,13 +25,15 @@ namespace ConsoleApp7
 
             sum = MathUtils.Multiply();
             Console.WriteLine(sum);
+
+            Console.WriteLine(math1.Number_one);
         }
     }
     class MathUtils
     {
         private static readonly double pi = 3.14;
 
-        public static int Number_one { get { return number_one; } set { number_one = value; } }
+        public int Number_one { get { return number_one; } set { number_one = value; } }
         private static int number_one;
 
         public static int Number_two { get { return number_two; } set { number_two = value; } }
