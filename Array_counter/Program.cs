@@ -9,6 +9,7 @@ namespace Array_counter
     internal class Program
     {
         // вычислить сумму элементов массива целых чисел.
+        // и факториал числа
         static void Main(string[] args)
         {
             int a = 4;  

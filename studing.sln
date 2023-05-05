@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "getset", "getset\getset.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tesst", "tesst\tesst.csproj", "{2373F753-08A5-4319-BF94-2F79C095ABC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{2373F753-08A5-4319-BF94-2F79C095ABC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2373F753-08A5-4319-BF94-2F79C095ABC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2373F753-08A5-4319-BF94-2F79C095ABC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{DA61CB31-36A3-4987-AE47-FCD7494533B5} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 		{D58D8A0C-71B8-480D-BD41-F3494CACE49E} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 		{2373F753-08A5-4319-BF94-2F79C095ABC8} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
+		{BE7B9D8A-6FB3-4889-A4CC-C551D59F40E9} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA515B16-C8B0-4CD3-8A3D-0057467C659B}
