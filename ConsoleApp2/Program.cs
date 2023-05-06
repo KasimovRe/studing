@@ -10,19 +10,19 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            DateTime a = DateTime.Now;
+            DateTime datetime = DateTime.Now;
 
-            a.Print();
-            Console.WriteLine(a.DataTimeToDie());
-            bool day = a.IsDateOfWeek(DayOfWeek.Saturday);
+            datetime.Print();
+            Console.WriteLine(datetime.DataTimeToDie());
+            bool day = datetime.IsDateOfWeek(DayOfWeek.Saturday);
 
             string what = PrintIs(day);
             Console.WriteLine(what);
         }
         public static string PrintIs(bool day)
         {
-            if (day != true) { string notDay = "it is not day now"; return notDay; }
-            else { string thisDay = "it is day now"; return thisDay; }
+            if (day != true) { string notDay = "it is not now day "; return notDay; }
+            else { string thisDay = "it is now day"; return thisDay; }
         }
     }
 }

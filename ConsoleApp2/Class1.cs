@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    static class extensionDay
+    static class ExtensionDay
     {
-        public static void Print(this DateTime dateTime)
-        {
-            Console.WriteLine(dateTime.ToString());
-        }
+        public static void Print(this DateTime daytime) => Console.WriteLine(daytime);
         public static string DataTimeToDie(this DateTime dateTime)
         {
             dateTime = DateTime.Parse("13.07.22 0:10:15");

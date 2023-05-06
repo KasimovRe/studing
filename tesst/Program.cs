@@ -10,11 +10,11 @@ namespace ConsoleApp7
     {
         static void Main(string[] args)
         {
-            DateTime a = DateTime.Now;
+            DateTime datetime = DateTime.Now;
 
-            a.Print();
-            Console.WriteLine(a.DataTimeToDie());
-            bool day = a.IsDateOfWeek(DayOfWeek.Friday);
+            datetime.Print();
+            Console.WriteLine(datetime.DataTimeToDie());
+            bool day = datetime.IsDateOfWeek(DayOfWeek.Friday);
 
             string what = Printis(day);
 
@@ -41,7 +41,7 @@ namespace ConsoleApp7
         }
         public static bool IsDateOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek)
         {
-            Console.Write("$ {dayOfWeek} );
+            Console.Write($"Day: {dayOfWeek} ");
             return dateTime.DayOfWeek == dayOfWeek;
         }
     }
