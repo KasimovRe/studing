@@ -13,10 +13,12 @@ namespace ConsoleApp2
             DateTime datetime = DateTime.Now;
 
             datetime.Print();
-            Console.WriteLine(datetime.DataTimeToDie());
-            bool day = datetime.IsDateOfWeek(DayOfWeek.Saturday);
 
+            Console.WriteLine(datetime.DataTimeToDie());
+
+            bool day = datetime.IsDateOfWeek(DayOfWeek.Saturday);
             string what = PrintIs(day);
+
             Console.WriteLine(what);
         }
         public static string PrintIs(bool day)

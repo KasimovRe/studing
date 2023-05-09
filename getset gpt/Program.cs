@@ -15,7 +15,10 @@ namespace getset_gpt
         static void Main(string[] args)
         {
             BankAccount account = new BankAccount();
+
+            Console.WriteLine(account.Balance);
             account.InterestRate = 100;
+
             Console.WriteLine(account.Balance);
 
             account.Deposit(10000);
