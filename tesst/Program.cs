@@ -10,39 +10,9 @@ namespace ConsoleApp7
     {
         static void Main(string[] args)
         {
-            DateTime datetime = DateTime.Now;
-
-            datetime.Print();
-            Console.WriteLine(datetime.DataTimeToDie());
-            bool day = datetime.IsDateOfWeek(DayOfWeek.Friday);
-
-            string what = Printis(day);
-
-            Console.WriteLine(what);
+            Console.WriteLine();
         }
-        public static string Printis(bool day)
-        {
-            if (day != true) { string notDay = "it is not day now"; return notDay; }
-            else { string thisDay = "it is day now"; return thisDay; }
-        }
-    }
-
-    static class extension
-    {
-        public static void Print (this DateTime dateTime)
-        {
-            Console.WriteLine(dateTime.ToString());
-        }
-        public static string DataTimeToDie(this DateTime dateTime)
-        {
-            dateTime = DateTime.Parse("13.07.22 0:10:15");
-
-            return dateTime.ToString();
-        }
-        public static bool IsDateOfWeek(this DateTime dateTime, DayOfWeek dayOfWeek)
-        {
-            Console.Write($"Day: {dayOfWeek} ");
-            return dateTime.DayOfWeek == dayOfWeek;
-        }
+        static void PrmtHZ()
+        { Console.WriteLine("alsdjlaksdfj"); }
     }
 }

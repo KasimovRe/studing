@@ -89,7 +89,6 @@ namespace calc
                     }
                 }
             }
-            Console.ReadLine();
         }
     }
 }
