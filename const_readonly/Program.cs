@@ -46,10 +46,5 @@ namespace const_readonly
             if (IS_ELECTRIC == true) { Console.WriteLine("This car electric"); }
             else { Console.WriteLine("This car NOT electric"); }
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }
