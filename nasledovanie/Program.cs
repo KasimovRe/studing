@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,16 +9,19 @@ namespace nasledovanie
 {
     // Создайте базовый класс Shape.
     // В нем определите поля color и filled и метод Draw()
-    // Создайте производные классы Circle и Rectangle, р
+    // Создайте производные классы Circle и Rectangle,
     // реализуйте их метод Draw().
     internal class Program
     {
         static void Main(string[] args)
         {
-            Circle curcle = new Circle();
+            Circle circle = new Circle()
             {
-                Color = 
-            }
+                Color = "Синий",
+                Size = 10
+            };
+
+
         }
     }
 
@@ -31,6 +35,17 @@ namespace nasledovanie
             Console.WriteLine($"Цвет: {Color}");
             Console.WriteLine($"Размер: {Size} x {Size}");
         }
+
+        static void WhatShape(string shape)
+        {
+            Console.WriteLine($"It's {shape}!");
+        }
     }
-    class Circle : Shape { }
+    class Circle : Shape 
+    {
+        private string WhatCircle = "Круг";
+        
+        
+        
+    }
 }

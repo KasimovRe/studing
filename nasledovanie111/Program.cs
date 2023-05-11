@@ -12,27 +12,73 @@ namespace nasledovanie111
     {
         static void Main(string[] args)
         {
+            ParentsMe parents = new ParentsMe()
+            {};
+
+            Vladlen vladlen = new Vladlen()
+            {
+                Son = "Владлен",
+                GirlSons = "Лиза",
+
+                Mother = "Катя",
+                Father = "Ильшат"
+            };
+
+            vladlen.Info();
+
+            Console.WriteLine("\n");
+            ParentsLisa parentsLisa = new ParentsLisa()
+            {
+                Mother = "Nеизвестно",
+            };
+
+            parentsLisa.Info1();
+
+            Class1 class1 = new Class1();
+            class1.Buga();
         }
+
     }
-    class Family
+    class ParentsMe 
     {
-        public string Mother { get; set; }
+        private string mother;
+        public string Mother { get { return mother; } set { mother = value; } }
         public string Father { get; set; }
 
-        public void PrintFamily()
+        public void Info1()
         {
-            Console.WriteLine(Mother);
+            Console.WriteLine(mother);
             Console.WriteLine(Father);
         }
     }
-    class Vlalden : Family
+    class ParentsLisa : ParentsMe
+    {
+    }
+    class Vladlen : ParentsMe
     {
         public string Son { get; set; }
         public string GirlSons { get; set; }
 
-        public void PrintFamily() : this
+        public void Info()
         {
+            Console.WriteLine(Son);
+            Console.WriteLine(GirlSons);
 
+            ParentsLisa parent = new ParentsLisa() { Mother = "Nеизвестно" };
+            parent.Info1();
+            Info1();
+        }
+    }
+
+    class Lenar : ParentsMe
+    {
+        public string Son { get; set;}
+        public string GirlSons { get; set; }
+
+        public void Info()
+        {
+            Console.WriteLine(Son);
+            Console.WriteLine(GirlSons);
         }
     }
 }
