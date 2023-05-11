@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nasledovanieGTP", "nasledov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nasledovanie111", "nasledovanie111\nasledovanie111.csproj", "{1B0399BE-0C7C-4530-9850-A8FBF452B2DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baseGPT", "baseGPT\baseGPT.csproj", "{545A515F-D72B-4F1E-8258-34BAD235C423}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 		{1B0399BE-0C7C-4530-9850-A8FBF452B2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B0399BE-0C7C-4530-9850-A8FBF452B2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B0399BE-0C7C-4530-9850-A8FBF452B2DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545A515F-D72B-4F1E-8258-34BAD235C423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545A515F-D72B-4F1E-8258-34BAD235C423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545A515F-D72B-4F1E-8258-34BAD235C423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545A515F-D72B-4F1E-8258-34BAD235C423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -210,6 +216,7 @@ Global
 		{2143A96B-BB6D-4BB4-B44D-3627870FCDAE} = {87F558BF-0133-45BA-8C87-B7635EDADBB1}
 		{C79E9DAA-B048-4DCF-9A57-CC072C42F7F1} = {ED57F5D2-0944-4233-8951-A23521EC8217}
 		{1B0399BE-0C7C-4530-9850-A8FBF452B2DB} = {B975220A-E2F6-4083-B0F8-C9D979F711C8}
+		{545A515F-D72B-4F1E-8258-34BAD235C423} = {ED57F5D2-0944-4233-8951-A23521EC8217}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA515B16-C8B0-4CD3-8A3D-0057467C659B}

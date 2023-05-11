@@ -24,7 +24,7 @@ namespace nasledovanie111
                 Father = "Ильшат"
             };
 
-            vladlen.Info();
+            vladlen.Info1();
 
             Console.WriteLine("\n");
             ParentsLisa parentsLisa = new ParentsLisa()
@@ -32,7 +32,7 @@ namespace nasledovanie111
                 Mother = "Nеизвестно",
             };
 
-            parentsLisa.Info1();
+            parentsLisa.Info();
 
             Class1 class1 = new Class1();
             class1.Buga();
@@ -45,7 +45,7 @@ namespace nasledovanie111
         public string Mother { get { return mother; } set { mother = value; } }
         public string Father { get; set; }
 
-        public void Info1()
+        public void Info()
         {
             Console.WriteLine(mother);
             Console.WriteLine(Father);
@@ -59,14 +59,14 @@ namespace nasledovanie111
         public string Son { get; set; }
         public string GirlSons { get; set; }
 
-        public void Info()
+        public void Info1()
         {
             Console.WriteLine(Son);
             Console.WriteLine(GirlSons);
 
             ParentsLisa parent = new ParentsLisa() { Mother = "Nеизвестно" };
-            parent.Info1();
-            Info1();
+            parent.Info();
+            base.Info();
         }
     }
 
