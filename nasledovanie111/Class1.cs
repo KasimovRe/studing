@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nasledovanie111
 {
-    internal class Class1 : Vladlen
+    internal class Class1 
     {
         public void Buga() { Console.WriteLine("BUHAHGAGAGGDSHHNFJH"); }
     }

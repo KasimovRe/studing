@@ -5,80 +5,174 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace nasledovanie111
-{
     // создать класс, допустим, который ну будет иметь родительский класс Parents и
     // будет выводить на консоль имена членов семьи. а далее дочерние которые ну тд короч пон
-    internal class Program
+{
+    //internal class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        ParentsMe parents = new ParentsMe()
+    //        {};
+
+    //        Vladlen vladlen = new Vladlen()
+    //        {
+    //            Son = "Владлен",
+    //            GirlSons = "Лиза",
+
+    //            Mother = "Катя",
+    //            Father = "Ильшат"
+    //        };
+
+    //        vladlen.Info1();
+
+    //        Console.WriteLine("\n");
+    //        ParentsLisa parentsLisa = new ParentsLisa()
+    //        {
+    //            Mother = "Nеизвестно",
+    //        };
+
+    //        parentsLisa.Info();
+
+    //        Class1 class1 = new Class1();
+    //        class1.Buga();
+    //    }
+
+    //}
+    //class ParentsMe 
+    //{
+    //    private string mother;
+    //    public string Mother { get { return mother; } set { mother = value; } }
+    //    public string Father { get; set; }
+
+    //    public void Info()
+    //    {
+    //        Console.WriteLine(mother);
+    //        Console.WriteLine(Father);
+    //    }
+    //}
+    //class ParentsLisa : ParentsMe
+    //{
+    //}
+    //class Vladlen : ParentsMe
+    //{
+    //    public string Son { get; set; }
+    //    public string GirlSons { get; set; }
+
+    //    public void Info1()
+    //    {
+    //        Console.WriteLine(Son);
+    //        Console.WriteLine(GirlSons);
+
+    //        ParentsLisa parent = new ParentsLisa() { Mother = "Nеизвестно" };
+    //        parent.Info();
+    //        base.Info();
+    //    }
+    //}
+
+    //class Lenar : ParentsMe
+    //{
+    //    public string Son { get; set;}
+    //    public string GirlSons { get; set; }
+
+    //    public void Info()
+    //    {
+    //        Console.WriteLine(Son);
+    //        Console.WriteLine(GirlSons);
+    //    }
+    //}
+
+    class Program
     {
         static void Main(string[] args)
         {
-            ParentsMe parents = new ParentsMe()
-            {};
-
-            Vladlen vladlen = new Vladlen()
+            Parents lisa = new Parents()
             {
-                Son = "Владлен",
-                GirlSons = "Лиза",
-
-                Mother = "Катя",
-                Father = "Ильшат"
+                Mom = "Кто-то",
             };
 
-            vladlen.Info1();
-
-            Console.WriteLine("\n");
-            ParentsLisa parentsLisa = new ParentsLisa()
+            Family me = new Family()
             {
-                Mother = "Nеизвестно",
+                Mom = "Мама",
+                Pap = "Папа",
+                GirlSons = "Лиза"
             };
 
-            parentsLisa.Info();
 
-            Class1 class1 = new Class1();
-            class1.Buga();
+            Family pap = new Family() { GirlSons = "Лиза", Son = "Владик" };
+
+            lisa.Print();
+            me.Print();
+            pap.Print();
+
+            Relative lenar = new Relative()
+            {
+                Brother = Family.me,
+                GirlSons = me.GirlSons,
+                Mom = me.Mom, 
+                Pap = me.Pap,
+            };
+
+            lenar.Print();
         }
-
     }
-    class ParentsMe 
-    {
-        private string mother;
-        public string Mother { get { return mother; } set { mother = value; } }
-        public string Father { get; set; }
 
-        public void Info()
+    class Parents
+    {
+        public string Mom { get; set; }
+        public string Pap { get; set; }
+
+        public Parents() 
         {
-            Console.WriteLine(mother);
-            Console.WriteLine(Father);
+            Console.WriteLine("Вызыван базовый метод вызова родителей");
+        }
+
+        public void Print()
+        {
+            Console.WriteLine("1----------------------");
+            Console.WriteLine(Mom);
+            Console.WriteLine(Pap);
+            Console.WriteLine("----------------------1");
+            Console.WriteLine();
         }
     }
-    class ParentsLisa : ParentsMe
+
+    class Family : Parents
     {
-    }
-    class Vladlen : ParentsMe
-    {
+        public static string me = "Владик";
+        public Family()
+        {
+            Console.WriteLine("Вызыван метод вызова семьи");
+        }
         public string Son { get; set; }
         public string GirlSons { get; set; }
 
-        public void Info1()
+        public new void Print()
         {
+            Console.WriteLine("2----------------------");
+            base.Print();
             Console.WriteLine(Son);
             Console.WriteLine(GirlSons);
-
-            ParentsLisa parent = new ParentsLisa() { Mother = "Nеизвестно" };
-            parent.Info();
-            base.Info();
+            Console.WriteLine("----------------------2");
+            Console.WriteLine();
         }
     }
 
-    class Lenar : ParentsMe
+    class Relative : Family
     {
-        public string Son { get; set;}
-        public string GirlSons { get; set; }
-
-        public void Info()
+        public Relative()
         {
-            Console.WriteLine(Son);
-            Console.WriteLine(GirlSons);
+            Console.WriteLine("Вызыван метод вызова родственника");
+        }
+        public string Brother { get { return Son ; } set { Son = value; } }
+
+        public new void Print()
+        {
+            Console.WriteLine("3----------------------");
+            base.Print();
+            Console.WriteLine(Brother);
+            Console.WriteLine("----------------------3");
+            Console.WriteLine();
         }
     }
 }

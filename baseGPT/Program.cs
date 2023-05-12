@@ -14,35 +14,29 @@ namespace baseGPT
     {
         static void Main(string[] args)
         {
-            Cat cat = new Cat("Барсик", 6);
-            cat.Print();
-
-
+            Animal animal = new Animal();
+            animal.PrintInfo();
+            
+            Cat cat = new Cat();
+            cat.PrintInfo();
         }
     }
 
-    class Animal
+    public class Animal
     {
-        public Animal(string name, int age) 
+        public void PrintInfo()
         {
-            Name = name;
-            Age = age;
+            Console.WriteLine("This is general animal info");
         }
-
-        public string Name { get; set; }
-        public int Age { get; set; }
     }
 
-    class Cat : Animal
+    public class Cat : Animal
     {
-        public Cat(string name, int age) : base(name, age)
+        public new void PrintInfo()
         {
-        }
-
-        public void Print()
-        {
-            Console.WriteLine(Name);
-            Console.WriteLine(Age);
+            Console.WriteLine();
+            base.PrintInfo();
+            Console.WriteLine("This is cat specific info");
         }
     }
 }
