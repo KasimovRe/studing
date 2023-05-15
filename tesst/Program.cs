@@ -31,7 +31,6 @@ namespace HelloApp
             Salary = salary;
         }
 
-
         public string Name { get; set; }
         public int Salary { get; set; }
 

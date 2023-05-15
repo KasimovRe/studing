@@ -7,45 +7,35 @@ using System.Threading.Tasks;
 
 namespace nasledovanie
 {
-    // Создайте базовый класс Shape.
-    // В нем определите поля color и filled и метод Draw()
-    // Создайте производные классы Circle и Rectangle,
-    // реализуйте их метод Draw().
-    internal class Program
+    // Дана коллекция объектов неопределенного типа.
+    // Определите тип каждого объекта и обработайте соответственно:
+    class itisas
     {
         static void Main(string[] args)
         {
-            Circle circle = new Circle()
+            Animal animal = new Animal2();
+
+            Animal2 animal2 = animal as Animal2;
+
+            Animal animal3 = animal;
+            animal3 = null;
+
+            object[] obj = { 124, animal, animal2, animal3 };
+            What(obj);
+        }
+
+        static void What(object[] obj)
+        {
+            foreach (var item in obj)
             {
-                Color = "Синий",
-                Size = 10
-            };
-
-
+                if (item is Animal animal) { Console.WriteLine("its animal"); }
+                else if (item is Animal2 animal2) { Console.WriteLine( "its animal2" ); }
+                else if ( item != null ) { Console.WriteLine("its not null"); }
+                else { Console.WriteLine("WTF"); }
+            }
         }
     }
 
-    class Shape
-    {
-        public string Color { get; set; }
-        public int Size { get; set; }
-
-        public void Draw()
-        {
-            Console.WriteLine($"Цвет: {Color}");
-            Console.WriteLine($"Размер: {Size} x {Size}");
-        }
-
-        static void WhatShape(string shape)
-        {
-            Console.WriteLine($"It's {shape}!");
-        }
-    }
-    class Circle : Shape 
-    {
-        private string WhatCircle = "Круг";
-        
-        
-        
-    }
+    class Animal { }
+    class Animal2 : Animal { }
 }
