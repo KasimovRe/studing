@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "abstract class", "abstract 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "avbstractGPT", "avbstractGPT\avbstractGPT.csproj", "{36C7B1D2-C01D-43B0-9097-6C5A6238C3B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interfaceGPT", "interfaceGPT\interfaceGPT.csproj", "{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{36C7B1D2-C01D-43B0-9097-6C5A6238C3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36C7B1D2-C01D-43B0-9097-6C5A6238C3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36C7B1D2-C01D-43B0-9097-6C5A6238C3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -238,6 +244,7 @@ Global
 		{B6C392C6-A461-4A93-A267-C357D177B083} = {B975220A-E2F6-4083-B0F8-C9D979F711C8}
 		{DAA93CFD-A768-4E7D-ABE9-370C2190C653} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 		{36C7B1D2-C01D-43B0-9097-6C5A6238C3B3} = {ED57F5D2-0944-4233-8951-A23521EC8217}
+		{3524FF4F-B6C7-4F77-8BAA-8BB9DE582CD5} = {ED57F5D2-0944-4233-8951-A23521EC8217}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA515B16-C8B0-4CD3-8A3D-0057467C659B}
