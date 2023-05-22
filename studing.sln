@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interfaceStuding", "interfa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interfaceME", "interfaceME\interfaceME.csproj", "{162354B6-460A-4044-B2C7-A3C7FA40FF6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolLIA", "schoolLIA\schoolLIA.csproj", "{6B4CB20F-D41A-4509-8ED3-4B6A658E466F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{162354B6-460A-4044-B2C7-A3C7FA40FF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162354B6-460A-4044-B2C7-A3C7FA40FF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162354B6-460A-4044-B2C7-A3C7FA40FF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,6 +272,7 @@ Global
 		{09A4CF41-E89D-4A25-AA81-E84FC1E4063B} = {ED57F5D2-0944-4233-8951-A23521EC8217}
 		{4999C291-147C-4CDB-819B-653DA7BF3F0D} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 		{162354B6-460A-4044-B2C7-A3C7FA40FF6F} = {87F558BF-0133-45BA-8C87-B7635EDADBB1}
+		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F} = {87F558BF-0133-45BA-8C87-B7635EDADBB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA515B16-C8B0-4CD3-8A3D-0057467C659B}
