@@ -9,6 +9,5 @@ namespace interfaceGPT3
     // Определить интерфейс IAnimalVehicle, наследующий от IAnimal и IVehicle.
     internal interface IAnimalVehicle : ICarnivore, ICar
     {
-
     }
 }

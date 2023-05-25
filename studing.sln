@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolLIA", "schoolLIA\scho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interfaceGPT3", "interfaceGPT3\interfaceGPT3.csproj", "{52D94E4B-9FDD-4BA8-A66E-6ADA74794DDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nasledovanieYavnayaTipizacia", "nasledovanieYavnayaTipizacia\nasledovanieYavnayaTipizacia.csproj", "{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -239,6 +241,10 @@ Global
 		{52D94E4B-9FDD-4BA8-A66E-6ADA74794DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52D94E4B-9FDD-4BA8-A66E-6ADA74794DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52D94E4B-9FDD-4BA8-A66E-6ADA74794DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -280,6 +286,7 @@ Global
 		{162354B6-460A-4044-B2C7-A3C7FA40FF6F} = {87F558BF-0133-45BA-8C87-B7635EDADBB1}
 		{6B4CB20F-D41A-4509-8ED3-4B6A658E466F} = {87F558BF-0133-45BA-8C87-B7635EDADBB1}
 		{52D94E4B-9FDD-4BA8-A66E-6ADA74794DDB} = {ED57F5D2-0944-4233-8951-A23521EC8217}
+		{851B8BEF-E8DD-4CDB-87FD-3CA11A92EBD1} = {DD84349D-72C1-463F-96CC-BD0FDE2CB025}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA515B16-C8B0-4CD3-8A3D-0057467C659B}
