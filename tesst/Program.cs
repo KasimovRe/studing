@@ -14,55 +14,50 @@ namespace HelloApp
     {
         static void Main(string[] args)
         {
-            Employee employee = new Employee("Бодя", 23500);
+            Dog rex = new Dog();
+            rex.AnimalInfo = new Animal() { Name = "Rex" };
+            rex.Age = 3;
+            rex.Breed = "Labrador";
 
-            Contractor contractor = new Contractor("opdfgfip", 34000);
-            employee.ConvertToContractor(contractor);
-
-            contractor.Print(employee);
+            rex.Print();
         }
     }
 
-    class Employee
+    struct Animal
     {
-        public Employee(string name, int salary)
+        public string Name;
+
+        public void Print()
         {
-            Name = name;
-            Salary = salary;
-        }
-
-        public string Name { get; set; }
-        public int Salary { get; set; }
-
-        public Contractor ConvertToContractor(Contractor contractor)
-        {
-            if (contractor is Employee)
-            {
-                Employee employee = contractor;
-                return (Contractor)employee;
-            }
-            return null;
-
+            Console.WriteLine($"Name: {Name}");
         }
     }
 
-
-    class Contractor : Employee
+    struct Dog
     {
-        public Contractor(string name, int salary) : base(name, salary) { }
+        public Animal AnimalInfo;
+        public int Age;
+        public string Breed;
 
-        public Employee ConvertToEmpoyee(Employee employee)
+        public void Print()
         {
-            if (employee is Contractor contractor)
-            {
-                return contractor;
-            }
-            return null;
+            AnimalInfo.Print();
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Breed: {Breed}");
         }
-        public void Print(Employee employee)
+    }
+
+    struct Cat
+    {
+        public Animal AnimalInfo;
+        public int Age;
+        public string Breed;
+
+        public void Print()
         {
-            Console.WriteLine(employee.Name);
-            Console.WriteLine(employee.Salary);
+            AnimalInfo.Print();
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Breed: {Breed}");
         }
     }
 }
