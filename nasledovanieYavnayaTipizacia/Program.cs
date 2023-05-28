@@ -31,6 +31,10 @@ namespace nasledovanieYavnayaTipizacia
             {
                 Console.WriteLine("True");
             }
+            else 
+            { 
+                Console.WriteLine("False"); 
+            }
             Console.ReadKey();
         }
 
@@ -43,6 +47,4 @@ namespace nasledovanieYavnayaTipizacia
             parent2.Move();
         }
     }
-    
-
 }
