@@ -15,7 +15,7 @@ namespace structGPT
         {
             Account lenar = new Account();
 
-            lenar.CreditCardNumber = 2746999921482901;
+            lenar.CreditCardNumber = 2746_9999_2148_2901;
             lenar.Balans = 5000;
 
             Account.Print(lenar);
@@ -29,7 +29,7 @@ namespace structGPT
 
             Account timerlan = new Account
             {
-                CreditCardNumber = 22001234567891
+                CreditCardNumber = 2200_1234_5678_9012
             };
             Account.WithdrawFunds(ref timerlan, 1000);
 
