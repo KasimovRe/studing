@@ -14,7 +14,7 @@ namespace structurs
             Number1 number11 = new Number1 { Number = 10 };
             Number2 number2 = new Number2 { Number = 10 };
 
-            Sum(out number1);
+            Sum(ref number1);
             Console.WriteLine(number1.Number);
 
             Sum(number11);
@@ -25,8 +25,7 @@ namespace structurs
 
             Console.ReadKey();
         }
-
-        static void Sum(out Number1 number) { int a = 10number.Number = ; }
+        static void Sum(ref Number1 number) { number.Number++; }
         static void Sum(Number1 number) { number.Number++; }
         static void Sum(Number2 number) { number.Number++; }
     }
