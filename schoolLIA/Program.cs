@@ -10,16 +10,33 @@ namespace schoolLIA
     {
         static void Main(string[] args)
         {
-            uint a = Convert.ToUInt32(Console.ReadLine());
-            int b = 10;
-            int c = 98;
-            int x = (int)(a * b * c) / 2;
-            Console.WriteLine(x);
+            // даны 2 угла треугольника (в градусах)
+            // определить, сущ ли такой треуг, и если да, 
+            // то будет ли он прямоугольным
 
-            bool sum = (a < b) && (b < c);
+            int a = Convert.ToInt32(Console.ReadLine()); // первый угол
+            int b = Convert.ToInt32(Console.ReadLine()); // второй угол
 
-            Console.WriteLine(sum);
+            if ((a + b <= 90) && (a > 0) && (b > 0)) // сумма 2 углов должна быть меньше 180 градусов
+            {                                         
+                Console.WriteLine("Да, такой треугольник существует");
 
+                if (a + b == 90) // если сумма 2 углов будет 90, то 3 угол
+                                 // тоже будет 90 градусов. и треуг будет прямоугольным
+                {
+                    Console.WriteLine("Треугольник прямоугольный");
+                }
+                else // если условие выше неверное, то треуг не прямоугольный
+                {
+                    Console.WriteLine("Треугольник НЕ прямоугольный");
+                }
+            }
+            else // если сумма 2 углов больше 90, то такого не сущ 
+            {
+                Console.WriteLine("Такого треугольника не существует");
+            }
+
+            Console.ReadKey();
         }
     }
 }
